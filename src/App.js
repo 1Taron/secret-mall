@@ -1,3 +1,20 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+import { Route, Routes } from "react-router-dom";
+import "./App.css";
+import Main from "./pages/Mainpage"
+import Product from "./pages/Product";
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Main />} />
+      <Route path="/Product" element={<Product />} />
+    </Routes>
+  );
+=======
+>>>>>>> Stashed changes
 import './App.css';
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
@@ -20,6 +37,10 @@ function App() {
             </a>
         </>
     );
+<<<<<<< Updated upstream
+=======
+>>>>>>> 949408155852b0277cc89a21cbf2d018eb6b82ab
+>>>>>>> Stashed changes
 }
 
 export default App;
