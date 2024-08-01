@@ -6,7 +6,7 @@ import '../css/main.css';
 export default function Mainpage() {
     return (
         <>
-            <div className='Canvas_weight'>
+            <div className="Canvas_weight">
                 <Canvas>
                     <OrbitControls autoRotate={true} />
                     <ambientLight intensity={1} />
@@ -17,8 +17,10 @@ export default function Mainpage() {
                     </mesh>
                 </Canvas>
             </div>
-            <a href='/Product'>Product page</a>
+            <a href="/Product">Product page</a>
+            <div>
+                <a href="/Login">Login page</a>
+            </div>
         </>
-
-    )
+    );
 }
