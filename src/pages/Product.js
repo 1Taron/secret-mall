@@ -1,10 +1,12 @@
 import React from "react";
+import '../css/products.css'
+
+import Header from "../component/Header";
 
 export default function Product() {
     return (
-        <div>
-            <h1>Product Page</h1>
-            <p>This is the product page.</p>
-        </div>
+        <>
+            <Header />
+        </>
     );
 }

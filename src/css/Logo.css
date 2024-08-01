@@ -1,0 +1,17 @@
+.DimHub_button {
+    border: 0px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+}
+
+.DIM {
+    font-family: Freesentation-9Black;
+    border-bottom: 3px solid black;
+    margin-right: 2px;
+}
+
+.HUB {
+    font-family: Freesentation-9Black;
+    border-top: 3px solid black;
+}

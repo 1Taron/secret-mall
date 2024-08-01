@@ -1,0 +1,10 @@
+.Header_Category {
+    display: flex;
+    text-align: center;
+}
+
+.Header_Category_Link {
+    font-size: 20px;
+    font-family: NPSfontBold;
+    width: 150px;
+}
