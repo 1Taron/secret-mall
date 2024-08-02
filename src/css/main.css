@@ -1,4 +1,30 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+.mainpage_container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_content {
+    flex: 1;
+    overflow-y: scroll;
+}
+
 .Canvas_weight {
     width: 100%;
     height: 350px;
+}
+.TEST {
+    width: 100%;
+    height: 700px;
+    border: 1px solid #ccc;
+}
+
+footer.show {
+    transform: translateY(0);
 }

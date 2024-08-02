@@ -28,8 +28,14 @@ export default function LoginBox() {
         setIsSignIn(prev => !prev); // 상태 토글
     }
 
+    const logoUrl = '/images/logo.png';
+
     return (
         <>
+            <a href="/">
+                <img className="thumbnail" src={logoUrl} alt="dimhub" />
+            </a>
+
             <div className="container">
                 <div className={`sign_section_form ${isSignIn ? 'active' : 'inactive'}`}>
                     {/* SIGN IN FORMBOX */}
