@@ -1,0 +1,10 @@
+.DIM {
+    font-family: Freesentation-9Black;
+    border-bottom: 10px solid black;
+    margin-right: 20px;
+}
+
+.HUB {
+    font-family: Freesentation-9Black;
+    border-top: 10px solid black;
+}

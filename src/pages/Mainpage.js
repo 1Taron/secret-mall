@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
 import '../css/main.css';
+
+import Moving_Logo from '../component/Moving_Logo';
 import Footer from '../component/Footer';
 
 export default function Mainpage() {
@@ -25,29 +25,10 @@ export default function Mainpage() {
 
     return (
         <div className="mainpage_container">
-            <div className="main_content">
-                <div className="Canvas_weight">
-                    <Canvas>
-                        <OrbitControls autoRotate={true} />
-                        <ambientLight intensity={1} />
-                        <directionalLight position={[-1, 0, 1]} intensity={0.5} />
-                        <mesh>
-                            <boxGeometry args={[3, 3, 3]} />
-                            <meshStandardMaterial attach="material" color={0xa3b18a} />
-                        </mesh>
-                    </Canvas>
-                </div>
-                <a href="/Product">Product page</a>
-                <div>
-                    <a href="/Login">Login page</a>
-                </div>
-                <div className="TEST">TEST</div>
-                <div className="TEST">TEST</div>
-            </div>
-
-            <footer className={showFooter ? 'show' : ''}>
+            <Moving_Logo className="Moving_logo" />
+            {/* <footer className={showFooter ? 'show' : ''}>
                 <Footer />
-            </footer>
+            </footer> */}
         </div>
     );
 }
