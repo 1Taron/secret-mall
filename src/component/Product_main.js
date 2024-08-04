@@ -3,7 +3,6 @@ import "../css/Product_main.css";
 
 import SearchBar from "./SearchBar";
 import Product_list from "./Product_list";
-import Footer from "./Footer";
 
 export default function Product_main() {
     return (
@@ -11,7 +10,6 @@ export default function Product_main() {
             <div className="main_container">
                 <SearchBar />
                 <Product_list />
-                <Footer />
             </div>
         </>
     );
