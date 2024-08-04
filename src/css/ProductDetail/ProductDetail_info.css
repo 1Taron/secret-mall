@@ -1,0 +1,23 @@
+.pdi_infoContainer {
+    flex: 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.pdi_infoThumbnail {
+    width: 550px;
+    min-height: 550px;
+    background-color: lightslategray;
+}
+
+.pdi_infobox {
+    width: 550px;
+    height: 100%;
+    align-self: center;
+    text-align: left;
+    margin-top: 10px;
+}

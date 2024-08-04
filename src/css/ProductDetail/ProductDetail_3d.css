@@ -1,0 +1,14 @@
+.pd3_Container {
+    border: 1px solid gainsboro;
+    flex: 4;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pd3_viewbox {
+    width: 650px;
+    height: 800px;
+    background-color: darkgray;
+}
