@@ -1,16 +1,30 @@
 html,
 body {
-    height: 100%;
     margin: 0;
+    overflow: hidden;
 }
 
-.mainpage_container {
+.section {
+    height: 100vh;
     display: flex;
     justify-content: center;
-
     align-items: center;
-    flex-direction: column;
+    font-size: 3rem;
+    transition: transform 0.5s ease;
 }
+
+#section1 {
+    background-color: #f0f0f0;
+}
+
+#section2 {
+    background-color: #d0e7f9;
+}
+
+#section3 {
+    background-color: #f9d0d0;
+}
+
 
 footer.show {
     transform: translateY(0);

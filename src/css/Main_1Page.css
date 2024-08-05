@@ -1,10 +1,9 @@
 .Moving_logo {
     font-size: 250px;
-    transform: translateY(40%);
+    transform: translateY(-60%);
 }
 
 .Main_Category {
     display: flex;
     justify-content: center;
-    transform: translateY(1400%);
 }

@@ -17,11 +17,11 @@ export default function Main_1Page() {
     }, []);
 
     return (
-        <>
+        <div className="Main_1Page">
             <Moving_Logo className="Moving_logo" />
             {showCategories && (
                 <Main_Category />
             )}
-        </>
+        </div>
     );
 }
