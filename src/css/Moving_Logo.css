@@ -1,10 +1,40 @@
-.DIM {
-    font-family: Freesentation-9Black;
-    border-bottom: 10px solid black;
-    margin-right: 20px;
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
-.HUB {
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+.DIM1 {
     font-family: Freesentation-9Black;
-    border-top: 10px solid black;
+    border-bottom: 30px solid black;
+    margin-right: 20px;
+    animation: slideInLeft 2s forwards;
+}
+
+.HUB1 {
+    font-family: Freesentation-9Black;
+    border-top: 30px solid black;
+    animation: slideInRight 2s forwards;
 }

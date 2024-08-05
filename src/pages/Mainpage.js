@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../css/main.css';
 
-import Moving_Logo from '../component/Moving_Logo';
+import Main_1Page from '../component/Main_1Page';
 import Footer from '../component/Footer';
 
 export default function Mainpage() {
@@ -25,7 +25,7 @@ export default function Mainpage() {
 
     return (
         <div className="mainpage_container">
-            <Moving_Logo className="Moving_logo" />
+            <Main_1Page />
             {/* <footer className={showFooter ? 'show' : ''}>
                 <Footer />
             </footer> */}

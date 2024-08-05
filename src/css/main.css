@@ -7,11 +7,9 @@ body {
 .mainpage_container {
     display: flex;
     justify-content: center;
-    transform: translateY(40%);
-}
 
-.Moving_logo {
-    font-size: 300px;
+    align-items: center;
+    flex-direction: column;
 }
 
 footer.show {
