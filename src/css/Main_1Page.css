@@ -1,6 +1,10 @@
 .Moving_logo {
     font-size: 250px;
-    transform: translateY(-60%);
+    transform: translateY(70%);
+}
+
+.Main_1Page {
+    height: 100%;
 }
 
 .Main_Category {

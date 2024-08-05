@@ -1,6 +1,7 @@
 .Main_Category {
     display: flex;
     text-align: center;
+    transform: translateY(1800%);
 }
 
 .Main_Category_Link {
