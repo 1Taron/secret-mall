@@ -1,13 +1,96 @@
 .pds_infoContainer {
-    border: 1px solid lightgreen;
     flex: 1.5;
 
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
 .pds_infobox {
     width: 300px;
-    height: 100%;
-    border: 1px solid yellow;
+    height: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pds_infoLayout {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.pds_productName {
+    width: 100%;
+    height: 70px;
+    font-size: 20px;
+    font-weight: bold;
+    overflow: scroll;
+}
+.pds_infoLayout > div {
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+.pds_infoLayout > div > * {
+    width: 50%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+.pds_infobox > div:nth-child(2) {
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.pds_paymentBtn {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f4bfec;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+}
+
+.pds_paymentBtn:hover {
+    background-color: #f1c6eb;
+}
+.pds_paymentBtn:active {
+    background-color: #dda8d5;
+}
+
+.pds_paymentLayout > p {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pds_line {
+    width: 300px;
+    align-self: center;
+    border-top: 1px solid lightgray;
+}
+
+.pds_noticebox {
+    width: 300px;
+    height: 50%;
+    overflow-y: scroll;
+    border-bottom: 1px solid lightgray;
+}
+.pds_noticebox > p {
+    font-size: 12px;
 }

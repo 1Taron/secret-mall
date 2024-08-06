@@ -10,8 +10,8 @@
 
 .pdi_infoThumbnail {
     width: 550px;
-    min-height: 550px;
-    background-color: lightslategray;
+    min-height: 650px;
+    /* border: 1px solid sienna; */
 }
 
 .pdi_infobox {
@@ -20,4 +20,58 @@
     align-self: center;
     text-align: left;
     margin-top: 10px;
+}
+
+.pdi_ThumnailSwiper {
+    width: 550px;
+    height: 550px;
+    background-color: lightslategray;
+}
+
+.pdi_miniThumnailBox {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+.pdi_miniThumnailSwiper {
+    width: 100%;
+    display: flex;
+}
+.pdi_miniThumnailSwiper > .slick-list {
+    width: 100%;
+    height: 75px;
+}
+.pdi_miniThumnailSwiper div {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.pdi_miniThumnailSwiper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pdi_ThumnailSwiper .slick-prev:before,
+.pdi_ThumnailSwiper .slick-next:before {
+    color: black; /* 화살표 색상 */
+    font-size: 30px; /* 화살표 크기 */
+    z-index: 1; /* 다른 요소 위에 표시되도록 설정 */
+    opacity: 1;
+}
+.pdi_ThumnailSwiper .slick-prev {
+    left: -30px;
+}
+.pdi_miniThumnailSwiper .slick-prev:before,
+.pdi_miniThumnailSwiper .slick-next:before {
+    font-size: 20px;
+
+    opacity: 1;
+    color: black;
+}
+.pdi_miniThumnailSwiper .slick-prev {
+    left: -30px;
 }

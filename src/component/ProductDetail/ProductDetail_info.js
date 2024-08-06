@@ -1,11 +1,12 @@
 import React from 'react';
 import '../../css/ProductDetail/ProductDetail_info.css';
+import PDI_ThumbnailSlider from './PDI_ThumbnailSlider';
 
 export default function ProductDetail_info() {
     return (
         <>
             <div className="pdi_infoContainer">
-                <div className="pdi_infoThumbnail">Thumbnail</div>
+                <PDI_ThumbnailSlider />
                 <div className="pdi_infobox">
                     <h4>……………………………………………………………………………………………… </h4>
                     <br />
@@ -162,7 +163,9 @@ export default function ProductDetail_info() {
                     <p>・Modified bones and weights </p>
                     <p>・Edited and added mask texture </p>
                     <p>・Added a shape key to make the breastsbigger to "underwear" </p>
-                    <p>・Other minor corrections *Overwriting is not recommended 2022/5/28 ver1.11released </p>
+                    <p>・Other minor corrections *Overwriting is not recommended </p>
+                    <br />
+                    <p>2022/5/28 ver1.11released</p>
                     <p>・Adjusted cheek bones </p>
                     <p>・Modified the rotation of some bones </p>
                     <p>・Adjusted PB ・Adjustedmaterial settings </p>
