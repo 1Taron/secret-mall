@@ -7,6 +7,7 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.124/examples
 
 export default function ProductDetail_3d() {
     const viewBoxRef = useRef(null);
+    const rendererRef = useRef(null);
 
     useEffect(() => {
         // 씬, 카메라, 렌더러 설정
@@ -19,6 +20,7 @@ export default function ProductDetail_3d() {
         renderer.setSize(641, 795);
         renderer.shadowMap.enabled = true;
         viewBoxRef.current.appendChild(renderer.domElement);
+        rendererRef.current = renderer;
 
         // 카메라 위치 설정
         camera.position.set(-3, 5, 8);
@@ -104,7 +106,9 @@ export default function ProductDetail_3d() {
 
         // 컴포넌트 언마운트 시 정리
         return () => {
-            viewBoxRef.current.removeChild(renderer.domElement);
+            if (viewBoxRef.current && rendererRef.current) {
+                viewBoxRef.current.removeChild(rendererRef.current.domElement);
+            }
         };
     }, []);
 
