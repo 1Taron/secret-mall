@@ -6,7 +6,6 @@ import Product_main from '../component/Product_main';
 import Footer from '../component/Footer';
 
 export default function Product() {
-
     const [showFooter, setShowFooter] = useState(false);
 
     const handleScroll = () => {

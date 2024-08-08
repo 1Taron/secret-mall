@@ -1,8 +1,8 @@
-import React from "react";
-import "../css/Product_list.css";
+import React from 'react';
+import '../css/Product_list.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function Product_list() {
-
     const list = [
         { id: 1 },
         { id: 2 },
@@ -22,19 +22,22 @@ export default function Product_list() {
         { id: 16 },
         { id: 17 },
         { id: 18 },
-
-
     ];
 
+    const navigate = useNavigate();
+
+    const handleProductClick = () => {
+        navigate('/ProductDetail');
+    };
 
     return (
         <>
             <div className="Product_container">
-                <ul >
+                <ul>
                     <div className="List_item">
                         {list.map(item => (
                             <li key={item.id} className="List_item_li">
-                                <button className="Product_button">
+                                <button className="Product_button" onClick={handleProductClick}>
                                     <img className="product_img"></img>
                                     <p className="Product_name">이름</p>
                                     <p className="product_owner">닉네임</p>
