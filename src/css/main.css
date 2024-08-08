@@ -6,15 +6,14 @@ body {
 
 .section {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3rem;
     transition: transform 0.5s ease;
 }
 
 #section1 {
     background-color: #f0f0f0;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
 #section2 {

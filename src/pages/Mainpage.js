@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import '../css/main.css';
 
-import Main_1Page from '../component/Main_1Page';
+import Main_1Page from '../component/Main_Page/Main_1Page';
+import Main_2Page from '../component/Main_Page/Main_2Page';
 import Footer from '../component/Footer';
 
 export default function Mainpage() {
@@ -66,7 +67,7 @@ export default function Mainpage() {
                 <Main_1Page />
             </div>
             <div className="section" id="section2" ref={(el) => (sectionsRef.current[1] = el)}>
-                Section 2
+                <Main_2Page />
             </div>
             <div className="section" id="section3" ref={(el) => (sectionsRef.current[2] = el)}>
                 Section 3

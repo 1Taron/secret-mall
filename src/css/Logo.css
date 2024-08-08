@@ -1,6 +1,6 @@
 .DimHub_button {
     border: 0px;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
     display: flex;
 }

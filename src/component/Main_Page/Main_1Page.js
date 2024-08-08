@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "../css/Main_1Page.css";
+import "../../css/Main_Page/Main_1Page.css";
 
-import Moving_Logo from "./Moving_Logo";
-import Main_Category from "./Main_Category";
+import Moving_Logo from "../Moving_Logo";
+import Main_Category from "../Main_Category";
 
 export default function Main_1Page() {
 
