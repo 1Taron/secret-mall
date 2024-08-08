@@ -8,6 +8,7 @@
 .List_item {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 70px;
 }
 
 .List_item_li {
@@ -16,7 +17,6 @@
     margin-right: 5%;
     margin-bottom: 10px;
 }
-
 
 @media screen and (min-width: 980px) {
     .List_item_li {
@@ -27,8 +27,6 @@
     }
 }
 
-
-
 @media screen and (min-width: 1620px) {
     .List_item_li {
         display: flex;
@@ -36,7 +34,6 @@
         margin-left: 2%;
         margin-right: 2%;
     }
-
 }
 
 .Product_button {
@@ -45,8 +42,6 @@
     cursor: pointer;
     background-color: white;
 }
-
-
 
 .product_img {
     width: 100%;
