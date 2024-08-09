@@ -15,7 +15,7 @@ export default function ProductDetail_3d() {
 
         // 카메라 FOV
         // const camera = new THREE.PerspectiveCamera(60, 650 / 800, 0.1, 1000);
-        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 100);
+        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(641, 795);
         renderer.shadowMap.enabled = true;
@@ -23,11 +23,11 @@ export default function ProductDetail_3d() {
         rendererRef.current = renderer;
 
         // 카메라 위치 설정
-        camera.position.set(-3, 5, 8);
+        camera.position.set(-3, 15, 8);
 
         const controls = new OrbitControls(camera, renderer.domElement);
-        controls.enablePan = false;
-        controls.enableZoom = false;
+        controls.enablePan = false; //패닝 기능
+        controls.enableZoom = true; //확대 기능
         controls.target.set(0, 1, 0);
         controls.update();
 
@@ -36,7 +36,7 @@ export default function ProductDetail_3d() {
         // const backgroundTexture = textureLoader.load('/path/to/your/background.jpg');
         // scene.background = backgroundTexture;
         scene.background = new THREE.Color(0xa0a0a0);
-        scene.fog = new THREE.Fog(0xa0a0a0, 10, 50);
+        // scene.fog = new THREE.Fog(0xa0a0a0, 10, 50);
 
         const hemiLight = new THREE.HemisphereLight(0xffffff, 0x8d8d8d, 3);
         hemiLight.position.set(0, 20, 0);
@@ -67,15 +67,34 @@ export default function ProductDetail_3d() {
         // FBX 모델 로드
         const loader = new FBXLoader();
         loader.load(
-            '/XBot.fbx',
+            '/Models/Rusk_20.fbx',
             fbx => {
-                fbx.scale.set(0.06, 0.03, 0.05); // 모델 스케일 조정
+                // fbx.scale.set(0.06, 0.03, 0.05); // 모델 스케일 조정
+                fbx.scale.set(0.5, 0.5, 0.5); // 모델 스케일 조정
                 fbx.position.set(0, -1.5, 0);
                 fbx.traverse(child => {
                     if (child.isMesh) {
                         child.castShadow = true; // 모델이 그림자를 생성하도록 설정
                     }
+                    // if (child.isBone) {
+                    //     // 뼈의 포지션 및 로테이션을 초기화
+                    //     child.rotation.set(0, 0, 0); // 필요에 따라 조정
+                    // }
+                    // if (child.isBone) {
+                    //     // 예를 들어, 팔의 뼈를 T자 포즈로 조정
+                    //     // if (child.name.includes('UpperArm')) {
+                    //     //     child.rotation.x = Math.PI * 2; // 팔을 아래로 내리기
+                    //     //     child.rotation.y = Math.PI / 2;
+                    //     // }
+                    //     if (child.name === 'LeftShoulder') {
+                    //         child.rotation.y = Math.PI / 2;
+                    //     }
+                    //     if (child.name === 'RightShoulder') {
+                    //         child.rotation.y = Math.PI / -2;
+                    //     }
+                    // }
                 });
+
                 scene.add(fbx);
             },
             undefined,
@@ -83,19 +102,6 @@ export default function ProductDetail_3d() {
                 console.error(error);
             }
         );
-        // GLB 모델 로드
-        // const loader = new GLTFLoader(); // GLTFLoader 사용
-        // loader.load(
-        //     '/Xbot.glb', // GLB 파일 경로
-        //     gltf => {
-        //         gltf.scene.scale.set(0.05, 0.05, 0.03); // 모델 스케일 조정
-        //         scene.add(gltf.scene);
-        //     },
-        //     undefined,
-        //     error => {
-        //         console.error(error);
-        //     }
-        // );
 
         // 애니메이션 루프
         const animate = () => {
