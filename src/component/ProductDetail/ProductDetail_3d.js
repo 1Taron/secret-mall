@@ -15,9 +15,10 @@ export default function ProductDetail_3d() {
 
         // 카메라 FOV
         // const camera = new THREE.PerspectiveCamera(60, 650 / 800, 0.1, 1000);
-        const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 100);
+        const aspect = 641 / 736; // 가로/세로 비율
+        const camera = new THREE.PerspectiveCamera(30, aspect, 0.1, 1000);
         const renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(641, 795);
+        renderer.setSize(641, 736);
         renderer.shadowMap.enabled = true;
         viewBoxRef.current.appendChild(renderer.domElement);
         rendererRef.current = renderer;
