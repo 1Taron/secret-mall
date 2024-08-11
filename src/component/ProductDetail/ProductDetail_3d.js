@@ -15,15 +15,15 @@ export default function ProductDetail_3d() {
 
         // 카메라 FOV
         // const camera = new THREE.PerspectiveCamera(60, 650 / 800, 0.1, 1000);
-        const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer();
+        const camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight, 1, 100);
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setSize(641, 795);
         renderer.shadowMap.enabled = true;
         viewBoxRef.current.appendChild(renderer.domElement);
         rendererRef.current = renderer;
 
         // 카메라 위치 설정
-        camera.position.set(-3, 15, 8);
+        camera.position.set(0, 30, 90);
 
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enablePan = false; //패닝 기능
@@ -38,7 +38,7 @@ export default function ProductDetail_3d() {
         scene.background = new THREE.Color(0xa0a0a0);
         // scene.fog = new THREE.Fog(0xa0a0a0, 10, 50);
 
-        const hemiLight = new THREE.HemisphereLight(0xffffff, 0x8d8d8d, 3);
+        const hemiLight = new THREE.HemisphereLight(0xFFDDEF, 0x8d8d8d, 1);
         hemiLight.position.set(0, 20, 0);
         scene.add(hemiLight);
 
@@ -47,52 +47,67 @@ export default function ProductDetail_3d() {
         dirLight.castShadow = true; //그림자 생성
         scene.add(dirLight);
 
-        // ground
-        const mesh = new THREE.Mesh(
-            new THREE.PlaneGeometry(100, 100),
-            new THREE.MeshPhongMaterial({ color: 0xcbcbcb, depthWrite: false })
-        );
-        mesh.rotation.x = -Math.PI / 2;
-        mesh.receiveShadow = true; //바닥이 그림자를 받을 수 있도록
-        mesh.position.y = -1.5;
-        scene.add(mesh);
 
         // 조명 추가
-        const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
         scene.add(ambientLight);
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-        directionalLight.position.set(5, 10, 7.5); // 조명 위치 조정
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.1);
+        directionalLight.position.set(10, 20,); // 조명 위치 조정
         scene.add(directionalLight);
+
+        //텍스쳐 로더
+        const textureLoader = new THREE.TextureLoader();
+        const Rusk_Alpha = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Alpha.png');
+        const Rusk_Body = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Body.png');
+        const Rusk_Costume = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Costume.png');
+        const Rusk_Hair = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Hair.png');
+        const Rusk_Face = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Face.png');
 
         // FBX 모델 로드
         const loader = new FBXLoader();
         loader.load(
-            '/Models/Rusk_20.fbx',
+            '/Models/Rusk_v1.21/FBX/Rusk_v1.2.1.fbx',
             fbx => {
-                // fbx.scale.set(0.06, 0.03, 0.05); // 모델 스케일 조정
-                fbx.scale.set(0.5, 0.5, 0.5); // 모델 스케일 조정
-                fbx.position.set(0, -1.5, 0);
+                fbx.scale.set(0.25, 0.25, 0.25); // 모델 스케일 조정
+                fbx.position.set(0, -15, 0);
                 fbx.traverse(child => {
+                    child.material = new THREE.MeshStandardMaterial();
                     if (child.isMesh) {
-                        child.castShadow = true; // 모델이 그림자를 생성하도록 설정
+                        switch (child.name) {
+                            case 'hair':
+                                child.material.map = Rusk_Costume;
+                                child.material.map = Rusk_Hair;
+                                break;
+                            case 'Body':
+                                child.material.map = Rusk_Face; // 얼굴 텍스처 적용
+                                child.material.alphaMap = Rusk_Alpha; // 알파 맵 적용
+                                child.material.color.set(0xffffff); // 기본 색상을 흰색으로 설정
+                                break;
+                            case 'body_2':
+                                child.material.map = Rusk_Body; // Rust_Body ��스처 적용
+                                break;
+                            case 'kemomimi':
+                                child.material.map = Rusk_Hair;
+                                break;
+                            case 'tail':
+                                child.material.map = Rusk_Hair;
+                                break;
+                            case 'knee-socks':
+                                child.material.map = Rusk_Costume; // Rusk_Costume 텍스처 적용
+                                break;
+                            case 'parker':
+                                child.material.map = Rusk_Costume; // Rusk_Costume 텍스처 적용
+                                break;
+                            case 'sneakers':
+                                child.material.map = Rusk_Costume; // Rusk_Costume 텍스처 적용
+                                break;
+
+                            default:
+                                break; // 해당 이름이 아닐 경우 아무것도 하지 않음
+                        }
+                        // 텍스처가 적용된 후 머티리얼의 필요 속성 업데이트
+                        child.material.needsUpdate = true; // 머티리얼 업데이트
                     }
-                    // if (child.isBone) {
-                    //     // 뼈의 포지션 및 로테이션을 초기화
-                    //     child.rotation.set(0, 0, 0); // 필요에 따라 조정
-                    // }
-                    // if (child.isBone) {
-                    //     // 예를 들어, 팔의 뼈를 T자 포즈로 조정
-                    //     // if (child.name.includes('UpperArm')) {
-                    //     //     child.rotation.x = Math.PI * 2; // 팔을 아래로 내리기
-                    //     //     child.rotation.y = Math.PI / 2;
-                    //     // }
-                    //     if (child.name === 'LeftShoulder') {
-                    //         child.rotation.y = Math.PI / 2;
-                    //     }
-                    //     if (child.name === 'RightShoulder') {
-                    //         child.rotation.y = Math.PI / -2;
-                    //     }
-                    // }
                 });
 
                 scene.add(fbx);
