@@ -28,13 +28,13 @@
 
 .DIM1 {
     font-family: Freesentation-9Black;
-    border-bottom: 30px solid black;
+    border-bottom: inherit;
     margin-right: 20px;
     animation: slideInLeft 2s forwards;
 }
 
 .HUB1 {
     font-family: Freesentation-9Black;
-    border-top: 30px solid black;
+    border-top: inherit;
     animation: slideInRight 2s forwards;
 }

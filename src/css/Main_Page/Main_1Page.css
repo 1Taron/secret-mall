@@ -1,6 +1,15 @@
 .Moving_logo {
     font-size: 250px;
+    color: whitesmoke;
     transform: translateY(70%);
+}
+
+.Moving_logo>.DIM1 {
+    border-bottom: 30px solid whitesmoke;
+}
+
+.Moving_logo>.HUB1 {
+    border-top: 30px solid whitesmoke;
 }
 
 .Main_1Page {

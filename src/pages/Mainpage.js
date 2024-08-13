@@ -3,6 +3,7 @@ import '../css/main.css';
 
 import Main_1Page from '../component/Main_Page/Main_1Page';
 import Main_2Page from '../component/Main_Page/Main_2Page';
+import Main_3d from '../../src/component/Main_Page/Main_3d';
 import Footer from '../component/Footer';
 
 export default function Mainpage() {
@@ -63,6 +64,7 @@ export default function Mainpage() {
                 transition: 'transform 0.5s ease',
             }}
         >
+            <Main_3d />
             <div className="section" id="section1" ref={(el) => (sectionsRef.current[0] = el)}>
                 <Main_1Page />
             </div>

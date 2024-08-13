@@ -1,13 +1,10 @@
 .pd3_Container {
     flex: 4;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .pd3_viewbox {
-    height: calc(100% - 50px);
-
     border: 2px solid #ccc;
 }
