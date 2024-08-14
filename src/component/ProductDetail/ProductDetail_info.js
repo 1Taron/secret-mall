@@ -1,12 +1,21 @@
 import React from 'react';
 import '../../css/ProductDetail/ProductDetail_info.css';
 import PDI_ThumbnailSlider from './PDI_ThumbnailSlider';
+import PDI_ThumbnailSlider_Rusk from './Charactor/Rusk/PDI_ThumbnailSlider_Rusk';
 
-export default function ProductDetail_info() {
+const thumbnailSliders = {
+    default: PDI_ThumbnailSlider,
+    Rusk: PDI_ThumbnailSlider_Rusk,
+};
+
+export default function ProductDetail_info({ productId }) {
+    const sliderKey = productId ? productId : 'default';
+    const ThumbnailSlider = thumbnailSliders[sliderKey] || thumbnailSliders.default;
+
     return (
         <>
             <div className="pdi_infoContainer">
-                <PDI_ThumbnailSlider />
+                <ThumbnailSlider />
                 <div className="pdi_infobox">
                     <h4>……………………………………………………………………………………………… </h4>
                     <br />

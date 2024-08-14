@@ -16,26 +16,10 @@ export default function Footer() {
         <>
             <div className={`${isMain ? 'mainfooter' : 'footer_container'}`}>
                 <div className="icon_container">
-                    <img
-                        src={icon_github}
-                        alt="icon_github"
-                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
-                    />
-                    <img
-                        src={icon_instagram}
-                        alt="icon_instagram"
-                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
-                    />
-                    <img
-                        src={icon_xtwitter}
-                        alt="icon_xtwitter"
-                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
-                    />
-                    <img
-                        src={icon_discord}
-                        alt="icon_discord"
-                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
-                    />
+                    <img src={icon_github} alt="icon_github" className="footer_icon" />
+                    <img src={icon_instagram} alt="icon_instagram" className="footer_icon" />
+                    <img src={icon_xtwitter} alt="icon_xtwitter" className="footer_icon" />
+                    <img src={icon_discord} alt="icon_discord" className="footer_icon" />
                 </div>
                 <div className="info_container">
                     <div>

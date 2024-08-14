@@ -49,16 +49,11 @@ export default function Mainpage() {
                     position: 'relative',
                 }}
             >
-                {Array.from({ length: 4 }).map((_, index) => (
-                    <div
-                        key={index}
-                        className={index === 3 ? 'footer_section' : 'section'}
-                        ref={el => (sectionsRef.current[index] = el)}
-                    >
+                {Array.from({ length: 3 }).map((_, index) => (
+                    <div key={index} className="section" ref={el => (sectionsRef.current[index] = el)}>
                         {index === 0 && <Main_1Page id="section1" />}
                         {index === 1 && <Main_2Page id="section2" />}
                         {index === 2 && <Main_3Page id="section3" />}
-                        {index === 3 && <Footer />}
                     </div>
                 ))}
             </div>

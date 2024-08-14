@@ -7,7 +7,7 @@ export default function Main_Category() {
         <>
             <div className="Main_Category">
                 <a
-                    href="/Product"
+                    href="/Charactor"
                     className="Main_Category_Link category"
                     style={{ animation: 'fadeIn 0.5s forwards' }}
                 >

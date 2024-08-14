@@ -3,11 +3,11 @@ import Header from '../component/Header';
 import '../css/ProductDetail/ProductDetail.css';
 import ProductDetail_main from '../component/ProductDetail/ProductDetail_main';
 
-export default function ProductDetailPage() {
+export default function ProductDetailPage({ productId }) {
     return (
         <>
             <Header />
-            <ProductDetail_main />
+            <ProductDetail_main productId={productId} />
         </>
     );
 }
