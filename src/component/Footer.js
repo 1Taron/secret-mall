@@ -5,16 +5,37 @@ import icon_github from '../svgs/github-brands-solid.svg';
 import icon_instagram from '../svgs/instagram-brands-solid.svg';
 import icon_xtwitter from '../svgs/x-twitter-brands-solid.svg';
 import icon_discord from '../svgs/discord-brands-solid.svg';
+import { useLocation } from 'react-router-dom';
 
 export default function Footer() {
+    const location = useLocation();
+
+    const isMain = location.pathname === '/';
+
     return (
         <>
-            <div className="footer_container">
+            <div className={`${isMain ? 'mainfooter' : 'footer_container'}`}>
                 <div className="icon_container">
-                    <img src={icon_github} alt="icon_github" className="footer_icon" />
-                    <img src={icon_instagram} alt="icon_instagram" className="footer_icon" />
-                    <img src={icon_xtwitter} alt="icon_xtwitter" className="footer_icon" />
-                    <img src={icon_discord} alt="icon_discord" className="footer_icon" />
+                    <img
+                        src={icon_github}
+                        alt="icon_github"
+                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
+                    />
+                    <img
+                        src={icon_instagram}
+                        alt="icon_instagram"
+                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
+                    />
+                    <img
+                        src={icon_xtwitter}
+                        alt="icon_xtwitter"
+                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
+                    />
+                    <img
+                        src={icon_discord}
+                        alt="icon_discord"
+                        className={`footer_icon ${isMain ? 'mainfooter' : 'anotherfooter'}`}
+                    />
                 </div>
                 <div className="info_container">
                     <div>

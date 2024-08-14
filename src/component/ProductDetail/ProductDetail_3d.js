@@ -39,7 +39,7 @@ export default function ProductDetail_3d() {
         scene.background = new THREE.Color(0xa0a0a0);
         // scene.fog = new THREE.Fog(0xa0a0a0, 10, 50);
 
-        const hemiLight = new THREE.HemisphereLight(0xFFDDEF, 0x8d8d8d, 1);
+        const hemiLight = new THREE.HemisphereLight(0xffddef, 0x8d8d8d, 1);
         hemiLight.position.set(0, 20, 0);
         scene.add(hemiLight);
 
@@ -48,12 +48,11 @@ export default function ProductDetail_3d() {
         dirLight.castShadow = true; //그림자 생성
         scene.add(dirLight);
 
-
         // 조명 추가
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
         scene.add(ambientLight);
         const directionalLight = new THREE.DirectionalLight(0xffffff, 0.1);
-        directionalLight.position.set(10, 20,); // 조명 위치 조정
+        directionalLight.position.set(10, 20); // 조명 위치 조정
         scene.add(directionalLight);
 
         //텍스쳐 로더

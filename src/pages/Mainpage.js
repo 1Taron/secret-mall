@@ -5,6 +5,7 @@ import Main_1Page from '../component/Main_Page/Main_1Page';
 import Main_2Page from '../component/Main_Page/Main_2Page';
 import Main_3d from '../../src/component/Main_Page/Main_3d';
 import Footer from '../component/Footer';
+import Main_3Page from '../component/Main_Page/Main_3Page';
 
 export default function Mainpage() {
     // scroll 이벤트
@@ -12,13 +13,14 @@ export default function Mainpage() {
     const sectionsRef = useRef([]);
     const isScrolling = useRef(false);
 
-    const handleScroll1 = (event) => {
+    const handleScroll1 = event => {
         event.preventDefault();
         if (isScrolling.current) return;
 
         isScrolling.current = true; // 스크롤 시작
         const direction = event.deltaY > 0 ? 1 : -1;
         const nextSection = currentSection + direction;
+
         if (nextSection >= 0 && nextSection < sectionsRef.current.length) {
             setCurrentSection(nextSection);
         }
@@ -29,7 +31,7 @@ export default function Mainpage() {
     };
 
     useEffect(() => {
-        const handleWheel = (event) => handleScroll1(event);
+        const handleWheel = event => handleScroll1(event);
         window.addEventListener('wheel', handleWheel, { passive: false });
 
         return () => {
@@ -37,43 +39,29 @@ export default function Mainpage() {
         };
     }, [currentSection]);
 
-
-    //footer 이벤트
-    const [showFooter, setShowFooter] = useState(false);
-
-    const handleScroll = () => {
-        if (window.scrollY > 100) {
-            setShowFooter(true);
-        } else {
-            setShowFooter(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-        // console.log('Scroll1 : ' + window.scrollY);
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
     return (
-        <div
-            style={{
-                transform: `translateY(-${currentSection * 100}vh)`,
-                transition: 'transform 0.5s ease',
-            }}
-        >
+        <div style={{ position: 'relative', overflow: 'hidden' }}>
             <Main_3d />
-            <div className="section" id="section1" ref={(el) => (sectionsRef.current[0] = el)}>
-                <Main_1Page />
+            <div
+                style={{
+                    transform: `translateY(-${currentSection * 100}vh)`,
+                    transition: 'transform 0.5s ease',
+                    position: 'relative',
+                }}
+            >
+                {Array.from({ length: 4 }).map((_, index) => (
+                    <div
+                        key={index}
+                        className={index === 3 ? 'footer_section' : 'section'}
+                        ref={el => (sectionsRef.current[index] = el)}
+                    >
+                        {index === 0 && <Main_1Page id="section1" />}
+                        {index === 1 && <Main_2Page id="section2" />}
+                        {index === 2 && <Main_3Page id="section3" />}
+                        {index === 3 && <Footer />}
+                    </div>
+                ))}
             </div>
-            <div className="section" id="section2" ref={(el) => (sectionsRef.current[1] = el)}>
-                <Main_2Page />
-            </div>
-            <div className="section" id="section3" ref={(el) => (sectionsRef.current[2] = el)}>
-                Section 3
-            </div>
-        </div >
+        </div>
     );
 }

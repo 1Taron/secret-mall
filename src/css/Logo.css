@@ -5,13 +5,28 @@
     display: flex;
 }
 
-.DIM {
+.blackDIM {
+    color: black;
     font-family: Freesentation-9Black;
     border-bottom: 3px solid black;
     margin-right: 2px;
 }
 
-.HUB {
+.blackHUB {
+    color: black;
     font-family: Freesentation-9Black;
     border-top: 3px solid black;
+}
+
+.whiteDIM {
+    color: white;
+    font-family: Freesentation-9Black;
+    border-bottom: 3px solid white;
+    margin-right: 2px;
+}
+
+.whiteHUB {
+    color: white;
+    font-family: Freesentation-9Black;
+    border-top: 3px solid white;
 }

@@ -53,11 +53,11 @@ const Main_3d = () => {
         return () => {
             mountRef.current.removeChild(renderer.domElement);
             renderer.dispose();
-            window.removeEventListener('resize', () => { });
+            window.removeEventListener('resize', () => {});
         };
     }, []);
 
-    return <div ref={mountRef} style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }} />;
+    return <div className="main_bg3d" ref={mountRef} />;
 };
 
 export default Main_3d;
