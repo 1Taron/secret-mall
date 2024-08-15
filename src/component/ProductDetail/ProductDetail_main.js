@@ -5,12 +5,14 @@ import ProductDetail_3d from './ProductDetail_3d';
 import ProductDetail_3d_Rusk from './Charactor/Rusk/ProductDetail_3d_Rusk';
 import ProductDetail_3d_XBot from './Charactor/XBot/ProductDetail_3d_XBot';
 import ProductDetail_3d_Makina from './Charactor/Makina/ProductDetail_3d_Makina';
+import ProductDetail_3d_AnimeticJazz from './Clothes/AnimeticJazz/ProductDetail_3d_AnimeticJazz';
 
 const product_3d = {
     default: ProductDetail_3d,
     Rusk: ProductDetail_3d_Rusk,
     Makina: ProductDetail_3d_Makina,
     XBot: ProductDetail_3d_XBot,
+    AnimeticJazz: ProductDetail_3d_AnimeticJazz,
 };
 
 export default function ProductDetail_main({ productId }) {

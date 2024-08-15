@@ -11,10 +11,8 @@ const category = {
     '/Clothes': Clothes_list,
 };
 
-export default function Product_main() {
+export default function ProductMain() {
     const location = useLocation();
-
-    console.log(location.pathname);
 
     const Category_List = category[location.pathname];
 

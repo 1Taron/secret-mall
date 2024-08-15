@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../css/products.css';
 
 import Header from '../component/Header';
-import Product_main from '../component/Product_main';
+import ProductMain from '../component/ProductMain ';
 import Footer from '../component/Footer';
 
 export default function Product() {
@@ -28,7 +28,7 @@ export default function Product() {
         <>
             <Header />
             <div className="products_mainContainer">
-                <Product_main />
+                <ProductMain />
                 <footer className={showFooter ? 'show' : ''}>
                     <Footer />
                 </footer>

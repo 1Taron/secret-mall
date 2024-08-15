@@ -55,60 +55,14 @@ export default function ProductDetail_3d_XBot() {
         directionalLight.position.set(10, 20); // 조명 위치 조정
         scene.add(directionalLight);
 
-        //텍스쳐 로더
-        const textureLoader = new THREE.TextureLoader();
-        const Rusk_Alpha = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Alpha.png');
-        const Rusk_Body = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Body.png');
-        const Rusk_Costume = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Costume.png');
-        const Rusk_Hair = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Hair.png');
-        const Rusk_Face = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Face.png');
-
         // FBX 모델 로드
         const loader = new FBXLoader();
         loader.load(
-            '/Models/Rusk_v1.21/FBX/Rusk_v1.2.1.fbx',
+            '/Models/XBot.fbx',
             fbx => {
                 fbx.scale.set(0.25, 0.25, 0.25); // 모델 스케일 조정
                 fbx.position.set(0, -15, 0);
-                fbx.traverse(child => {
-                    child.material = new THREE.MeshStandardMaterial();
-                    if (child.isMesh) {
-                        switch (child.name) {
-                            case 'hair':
-                                child.material.map = Rusk_Costume;
-                                child.material.map = Rusk_Hair;
-                                break;
-                            case 'Body':
-                                child.material.map = Rusk_Face; // 얼굴 텍스처 적용
-                                child.material.alphaMap = Rusk_Alpha; // 알파 맵 적용
-                                child.material.color.set(0xffffff); // 기본 색상을 흰색으로 설정
-                                break;
-                            case 'body_2':
-                                child.material.map = Rusk_Body; // Rust_Body ��스처 적용
-                                break;
-                            case 'kemomimi':
-                                child.material.map = Rusk_Hair;
-                                break;
-                            case 'tail':
-                                child.material.map = Rusk_Hair;
-                                break;
-                            case 'knee-socks':
-                                child.material.map = Rusk_Costume; // Rusk_Costume 텍스처 적용
-                                break;
-                            case 'parker':
-                                child.material.map = Rusk_Costume; // Rusk_Costume 텍스처 적용
-                                break;
-                            case 'sneakers':
-                                child.material.map = Rusk_Costume; // Rusk_Costume 텍스처 적용
-                                break;
-
-                            default:
-                                break; // 해당 이름이 아닐 경우 아무것도 하지 않음
-                        }
-                        // 텍스처가 적용된 후 머티리얼의 필요 속성 업데이트
-                        child.material.needsUpdate = true; // 머티리얼 업데이트
-                    }
-                });
+                fbx.traverse(child => {});
 
                 scene.add(fbx);
             },

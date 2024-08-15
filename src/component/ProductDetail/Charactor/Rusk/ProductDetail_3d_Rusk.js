@@ -37,6 +37,7 @@ export default function ProductDetail_3d_Rusk() {
         // const backgroundTexture = textureLoader.load('/path/to/your/background.jpg');
         // scene.background = backgroundTexture;
         scene.background = new THREE.Color(0xa0a0a0);
+
         // scene.fog = new THREE.Fog(0xa0a0a0, 10, 50);
 
         const hemiLight = new THREE.HemisphereLight(0xffddef, 0x8d8d8d, 1);
