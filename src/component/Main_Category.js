@@ -14,7 +14,7 @@ export default function Main_Category() {
                     Charactor
                 </a>
                 <a
-                    href="/Product"
+                    href="/Clothes"
                     className="Main_Category_Link category"
                     style={{ animation: 'fadeIn 1.25s forwards' }}
                 >

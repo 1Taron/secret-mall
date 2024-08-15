@@ -8,7 +8,7 @@ export default function Header_Category() {
                 <a href="/Charactor" className="Header_Category_Link">
                     Charactor
                 </a>
-                <a href="/" className="Header_Category_Link">
+                <a href="/Clothes" className="Header_Category_Link">
                     Clothes
                 </a>
                 <a href="/" className="Header_Category_Link">

@@ -13,6 +13,8 @@ function App() {
                 <Route path="/" element={<MainPage />} />
                 <Route path="/Charactor" element={<Product />} />
                 <Route path="/Charactor/:productId" element={<ProductDetailWrapper />} />
+                <Route path="/Clothes" element={<Product />} />
+                <Route path="/Clothes/:productId" element={<ProductDetailWrapper />} />
                 <Route path="/Login" element={<LoginPage />} />
             </Routes>
         </>
