@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import MainPage from './pages/Mainpage';
 import Product from './pages/Product';
 import { Route, Routes, useParams } from 'react-router-dom';
