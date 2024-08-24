@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader';
 import '../../../../css/ProductDetail/ProductDetail_3d.css';
@@ -8,6 +8,7 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.124/examples
 export default function ProductDetail_3d_AnimeticJazz() {
     const viewBoxRef = useRef(null);
     const rendererRef = useRef(null);
+    const [modelPath, setModelPath] = useState('/Models/Adore-blueberry.fbx');
 
     useEffect(() => {
         // 씬, 카메라, 렌더러 설정
@@ -56,58 +57,64 @@ export default function ProductDetail_3d_AnimeticJazz() {
         scene.add(directionalLight);
 
         const loader = new FBXLoader();
-        loader.load(
-            '/Models/Rusk.fbx',
-            fbx => {
-                fbx.scale.set(0.25, 0.25, 0.25); // 모델 스케일 조정
-                fbx.position.set(0, -15, 0);
-                fbx.traverse(child => {
-                    if (child.isBone) {
-                        console.log(child.name); // 메쉬 이름 출력
-                    }
-                    if (child.isBone) {
-                        if (child.name === 'LeftShoulder') {
-                            child.rotation.y = -1.5;
-                            child.rotation.z = 0;
-                            child.rotation.x = 1.5;
-                        } else if (child.name === 'RightShoulder') {
-                            child.rotation.y = 1.5;
-                            child.rotation.z = 0;
-                            child.rotation.x = 1.5;
+
+        const loadModel = (path) => {
+            loader.load(
+                path,
+                (fbx) => {
+                    fbx.scale.set(0.25, 0.25, 0.25);
+                    fbx.position.set(0, -15, 0);
+                    fbx.traverse((child) => {
+                        if (child.isBone) {
+                            if (child.name === 'LeftShoulder') {
+                                child.rotation.y = -1.6;
+                                child.rotation.z = 0;
+                                child.rotation.x = 1.5;
+                            } else if (child.name === 'RightShoulder') {
+                                child.rotation.y = 1.6;
+                                child.rotation.z = 0;
+                                child.rotation.x = 1.5;
+                            }
                         }
-                    }
-                });
-                scene.add(fbx);
-            },
-            undefined,
-            error => {
-                console.error(error);
-            }
-        );
+                    });
+                    scene.add(fbx);
+                },
+                undefined,
+                (error) => {
+                    console.error(error);
+                }
+            );
+        };
 
+        loadModel(modelPath); // 초기 모델 로드
 
-
-
-
-        // 애니메이션 루프
         const animate = () => {
             requestAnimationFrame(animate);
             renderer.render(scene, camera);
         };
         animate();
 
-        // 컴포넌트 언마운트 시 정리
         return () => {
             if (viewBoxRef.current && rendererRef.current) {
                 viewBoxRef.current.removeChild(rendererRef.current.domElement);
             }
         };
-    }, []);
+    }, [modelPath]); // 모델 경로가 변경될 때마다 이펙트 재실행
+
+    const handleModelChange = (event) => {
+        setModelPath(event.target.value); // 드롭다운에서 선택된 모델 경로로 상태 업데이트
+    };
 
     return (
         <>
             <div className="pd3_Container">
-                <div className="pd3_viewbox" ref={viewBoxRef}></div>
+                <div className="pd3_viewbox" ref={viewBoxRef}>
+                    <select className="Select_Model" onChange={handleModelChange}>
+                        <option value="/Models/Adore-blueberry.fbx">Adore Blueberry</option>
+                        <option value="/Models/Adore-bluelime.fbx">Adore-bluelime</option>
+                        <option value="/Models/Adore-chemical.fbx">Adore-chemical</option>
+                    </select>
+                </div>
             </div>
         </>
     );

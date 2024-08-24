@@ -7,4 +7,11 @@
 
 .pd3_viewbox {
     border: 2px solid #ccc;
+    position: relative;
+}
+
+.Select_Model {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
