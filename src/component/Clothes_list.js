@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Product_list() {
     const list = [
-        { id: 'AnimeticJazz' },
+        { id: 'AnimeticJazz', imgUrl: '/images/komado_clothes_img/img_01.jpg' },
         { id: 'Full Skirt Dress' },
         { id: 'A-line Skirt Dress' },
         { id: 4 },
@@ -33,7 +33,7 @@ export default function Product_list() {
                         {list.map(item => (
                             <li key={item.id} className="List_item_li">
                                 <button className="Product_button" onClick={() => handleProductClick(item.id)}>
-                                    <img className="product_img"></img>
+                                    <img src={item.imgUrl} className="product_img" />
                                     <p className="Product_name">{item.id}</p>
                                     <p className="product_owner">닉네임</p>
                                     <p className="product_price">가격</p>

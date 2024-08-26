@@ -111,8 +111,9 @@ export default function ProductDetail_3d_AnimeticJazz() {
                 <div className="pd3_viewbox" ref={viewBoxRef}>
                     <select className="Select_Model" onChange={handleModelChange}>
                         <option value="/Models/Adore-blueberry.fbx">Adore Blueberry</option>
-                        <option value="/Models/Adore-bluelime.fbx">Adore-bluelime</option>
-                        <option value="/Models/Adore-chemical.fbx">Adore-chemical</option>
+                        <option value="/Models/Adore-bluelime.fbx">Adore Bluelime</option>
+                        <option value="/Models/Adore-chemical.fbx">Adore Chemical</option>
+                        <option value="/Models/Adore-monopink.fbx">Adore Monopink</option>
                     </select>
                 </div>
             </div>

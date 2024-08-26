@@ -2,10 +2,12 @@ import React from 'react';
 import '../../css/ProductDetail/ProductDetail_info.css';
 import PDI_ThumbnailSlider from './PDI_ThumbnailSlider';
 import PDI_ThumbnailSlider_Rusk from './Charactor/Rusk/PDI_ThumbnailSlider_Rusk';
+import PDI_ThumbnailSlider_AnimeticJazz from './Clothes/AnimeticJazz/PDI_ThumbnailSlider_AnimeticJazz'
 
 const thumbnailSliders = {
     default: PDI_ThumbnailSlider,
     Rusk: PDI_ThumbnailSlider_Rusk,
+    AnimeticJazz: PDI_ThumbnailSlider_AnimeticJazz,
 };
 
 export default function ProductDetail_info({ productId }) {
