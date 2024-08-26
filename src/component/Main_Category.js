@@ -11,7 +11,7 @@ export default function Main_Category() {
                     className="Main_Category_Link category"
                     style={{ animation: 'fadeIn 0.5s forwards' }}
                 >
-                    Charactor
+                    Character
                 </a>
                 <a
                     href="/Clothes"

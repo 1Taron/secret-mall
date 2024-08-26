@@ -1,19 +1,85 @@
 .Main3_Container {
     color: white;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: calc(100vh - 50px - 100px);
+    height: calc(100vh - 50px);
     position: relative;
     margin-bottom: 100px;
     overflow-y: auto;
 }
 
-/* footer {
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
+.Main3_sectionContainer {
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    justify-content: center;
 }
 
-footer.show {
-    transform: translateY(0);
-} */
+.Main3_sectionContainer > div {
+    display: flex;
+    height: 600px;
+    transition: width 0.3s ease;
+}
+
+.main3_charBox.active,
+.main3_clothBox.active,
+.main3_accBox.active {
+    width: 800px;
+}
+
+.main3_charBox:not(.active),
+.main3_clothBox:not(.active),
+.main3_accBox:not(.active) {
+    width: 350px;
+    overflow: hidden;
+}
+.main3_charBox {
+    background-color: rgba(221, 160, 160, 0.5);
+    border-radius: 10px 0px 0px 10px;
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main3_clothBox {
+    background-color: rgba(220, 239, 166, 0.5);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main3_accBox {
+    background-color: rgba(183, 238, 238, 0.5);
+    border-radius: 0px 10px 10px 0px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.charBox_imgLayout,
+.clothBox_imgLayout,
+.accBox_imgLayout {
+    width: 250px;
+    height: 500px;
+    border: 1px solid white;
+}
+
+.charBox_textLayout,
+.clothBox_textLayout,
+.accBox_textLayout {
+    width: 500px;
+    height: 500px;
+    border: 1px solid white;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.charBox_textLayout.active2,
+.clothBox_textLayout.active2,
+.accBox_textLayout.active2 {
+    display: none;
+}

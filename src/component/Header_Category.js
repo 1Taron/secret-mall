@@ -6,7 +6,7 @@ export default function Header_Category() {
         <>
             <div className="Header_Category">
                 <a href="/Charactor" className="Header_Category_Link">
-                    Charactor
+                    Character
                 </a>
                 <a href="/Clothes" className="Header_Category_Link">
                     Clothes
