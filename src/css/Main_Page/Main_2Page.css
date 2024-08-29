@@ -12,10 +12,48 @@
     height: auto;
     min-height: calc(100vh - 50px);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+}
 
-    border: 1px solid white;
-    font-size: 50px;
+.main2_sectionContainer > div {
+    height: auto;
+}
+
+.main2_imglayout {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.main2_imgbox {
+    width: 460px;
+    height: auto;
+}
+.main2_img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.main2_infolayout {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main2_infolayout > * {
+    align-self: center;
+}
+.main2_infolayout > h1 {
+    width: 700px;
+    height: 50px;
+    letter-spacing: 1px;
+}
+.main2_infolayout > p {
+    width: 600px;
+    height: 100px;
+    line-height: 25px;
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../../css/Main_Page/Main_2Page.css';
 
 import Header from '../../component/Header';
@@ -8,6 +8,7 @@ export default function Main_2Page() {
     return (
         <>
             <Header />
+
             <Main2Section />
         </>
     );

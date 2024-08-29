@@ -31,7 +31,7 @@
     width: 60px;
 }
 .footer_icon {
-    width: 30px;
+    font-size: 35px;
 }
 
 .mainfooter {
@@ -47,7 +47,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transform: translateY(0); */
     transform: translateY(100%);
     z-index: 1000;
 }

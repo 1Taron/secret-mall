@@ -6,6 +6,8 @@ import icon_instagram from '../svgs/instagram-brands-solid.svg';
 import icon_xtwitter from '../svgs/x-twitter-brands-solid.svg';
 import icon_discord from '../svgs/discord-brands-solid.svg';
 import { useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faGithub, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     const location = useLocation();
@@ -16,10 +18,10 @@ export default function Footer() {
         <>
             <div className={`${isMain ? 'mainfooter' : 'footer_container'}`}>
                 <div className="icon_container">
-                    <img src={icon_github} alt="icon_github" className="footer_icon" />
-                    <img src={icon_instagram} alt="icon_instagram" className="footer_icon" />
-                    <img src={icon_xtwitter} alt="icon_xtwitter" className="footer_icon" />
-                    <img src={icon_discord} alt="icon_discord" className="footer_icon" />
+                    <FontAwesomeIcon icon={faGithub} className="footer_icon" />
+                    <FontAwesomeIcon icon={faInstagram} className="footer_icon" />
+                    <FontAwesomeIcon icon={faXTwitter} className="footer_icon" />
+                    <FontAwesomeIcon icon={faDiscord} className="footer_icon" />
                 </div>
                 <div className="info_container">
                     <div>
