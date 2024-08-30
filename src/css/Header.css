@@ -2,6 +2,9 @@
     display: flex;
     height: 50px;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
 }
 
 .Header_Logo {
@@ -19,11 +22,13 @@
 .black-header {
     color: black;
     border-bottom: 1px solid black !important;
+    background-color: white;
 }
 
 .white-header {
     color: white;
     border-bottom: 1px solid white !important;
+    background-color: black;
 }
 
 .Header_Logo,

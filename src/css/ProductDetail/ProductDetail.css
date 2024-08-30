@@ -1,8 +1,9 @@
 .pdm_mainContainer {
     width: 100%;
-    height: calc(100vh - 50px);
+    height: 100vh;
 
     display: flex;
+    padding-top: 50px;
 }
 
 .pdm_mainContainer > * {

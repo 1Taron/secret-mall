@@ -17,7 +17,10 @@ export default function Mainpage() {
             <ReactFullpage
                 debug
                 scrollOverflow={true}
-                scrolloverflowmacstyle={false}
+                scrollingSpeed={700}
+                onLeave={(origin, destination, direction) => {
+                    console.log('Leaving section ' + origin.index + ' to ' + destination.index);
+                }}
                 render={() => (
                     <ReactFullpage.Wrapper>
                         <div className="section">

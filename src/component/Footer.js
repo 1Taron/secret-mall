@@ -18,15 +18,17 @@ export default function Footer() {
         <>
             <div className={`${isMain ? 'mainfooter' : 'footer_container'}`}>
                 <div className="icon_container">
-                    <FontAwesomeIcon icon={faGithub} className="footer_icon" />
+                    <a href="https://github.com/1Taron/secret-mall">
+                        <FontAwesomeIcon icon={faGithub} className="footer_icon" />
+                    </a>
                     <FontAwesomeIcon icon={faInstagram} className="footer_icon" />
                     <FontAwesomeIcon icon={faXTwitter} className="footer_icon" />
                     <FontAwesomeIcon icon={faDiscord} className="footer_icon" />
                 </div>
                 <div className="info_container">
-                    <div>
+                    <div style={{ marginBottom: '10px' }}>
                         <p>tel</p>
-                        <p> : 010 - 1234 - 5270</p>
+                        <p> : 010 - 1234 - 5678</p>
                     </div>
                     <div>
                         <p>adress</p>

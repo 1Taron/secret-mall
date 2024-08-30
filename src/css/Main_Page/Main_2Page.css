@@ -1,16 +1,15 @@
 .Main2_Container {
     color: white;
     width: 100%;
-    height: calc(100vh - 50px);
+    /* height: 100%; */
     position: relative;
-    margin-bottom: 100px;
-    overflow-y: auto;
+    /* margin-bottom: 100px; */
 }
 
 .main2_sectionContainer {
     width: 100%;
     height: auto;
-    min-height: calc(100vh - 50px);
+    min-height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -19,6 +18,18 @@
 
 .main2_sectionContainer > div {
     height: auto;
+}
+
+.main2_mainInfo {
+    width: 100%;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+.main2_mainInfo > h1 {
+    margin-bottom: 15px;
 }
 
 .main2_imglayout {
@@ -56,4 +67,9 @@
     width: 600px;
     height: 100px;
     line-height: 25px;
+}
+
+.main2_footer {
+    bottom: 0;
+    position: fixed;
 }

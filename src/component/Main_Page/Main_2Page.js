@@ -3,6 +3,7 @@ import '../../css/Main_Page/Main_2Page.css';
 
 import Header from '../../component/Header';
 import Main2Section from './Main2Section';
+import Footer from '../Footer';
 
 export default function Main_2Page() {
     return (
@@ -10,6 +11,7 @@ export default function Main_2Page() {
             <Header />
 
             <Main2Section />
+            <Footer />
         </>
     );
 }

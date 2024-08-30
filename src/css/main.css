@@ -26,21 +26,6 @@ body {
     z-index: 1;
 }
 
-#section1 {
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    z-index: 1;
-}
-
-#section2 {
-    z-index: 1;
-}
-
-#section3 {
-    z-index: 1;
-}
-
 .main_bg3d {
     position: absolute;
     top: 0;
