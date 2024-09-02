@@ -3,9 +3,9 @@ import '../../css/Main_Page/Main_2Page.css';
 import Footer from '../../component/Footer';
 
 export default function Main2Section() {
-    const imgUrl_char = '/images/MainPage_imgs/characterImg.jpg';
-    const imgUrl_cloth = '/images/MainPage_imgs/clothesImg.jpg';
-    const imgUrl_unity = '/images/MainPage_imgs/unityImg.jpg';
+    const imgUrl_char = 'https://github.com/1Taron/secret-mall/images/MainPage_imgs/characterImg.jpg';
+    const imgUrl_cloth = 'https://github.com/1Taron/secret-mall/images/MainPage_imgs/clothesImg.jpg';
+    const imgUrl_unity = 'https://github.com/1Taron/secret-mall/images/MainPage_imgs/unityImg.jpg';
 
     const scrollTimeoutRef = useRef(null);
 
