@@ -2,21 +2,21 @@ import './App.css';
 import React, { useEffect } from 'react';
 import MainPage from './pages/Mainpage';
 import Product from './pages/Product';
-import { Route, Routes, useParams } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useParams } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 
 function App() {
     return (
         <>
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/Charactor" element={<Product />} />
-                    <Route path="/Charactor/:productId" element={<ProductDetailWrapper />} />
-                    <Route path="/Clothes" element={<Product />} />
-                    <Route path="/Clothes/:productId" element={<ProductDetailWrapper />} />
-                    <Route path="/Login" element={<LoginPage />} />
+                    <Route path={`${process.env.PUBLIC_URL}/`} element={<MainPage />} />
+                    <Route path={`${process.env.PUBLIC_URL}/Charactor`} element={<Product />} />
+                    <Route path={`${process.env.PUBLIC_URL}/Charactor/:productId`} element={<ProductDetailWrapper />} />
+                    <Route path={`${process.env.PUBLIC_URL}/Clothes`} element={<Product />} />
+                    <Route path={`${process.env.PUBLIC_URL}/Clothes/:productId`} element={<ProductDetailWrapper />} />
+                    <Route path={`${process.env.PUBLIC_URL}/Login`} element={<LoginPage />} />
                 </Routes>
             </BrowserRouter>
         </>
