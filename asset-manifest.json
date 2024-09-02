@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/secret-mall/static/css/main.079e0e6c.css",
+    "main.js": "/secret-mall/static/js/main.9d302289.js",
+    "static/js/511.e57ae850.chunk.js": "/secret-mall/static/js/511.e57ae850.chunk.js",
+    "static/media/login_backgroud.jpg": "/secret-mall/static/media/login_backgroud.fb9ec2a742d3e3723e7e.jpg",
+    "static/media/slick.svg": "/secret-mall/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/secret-mall/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/secret-mall/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/github-brands-solid.svg": "/secret-mall/static/media/github-brands-solid.8bbb8f09b1a2192f49f044af8350c909.svg",
+    "static/media/slick.woff": "/secret-mall/static/media/slick.295183786cd8a1389865.woff",
+    "static/media/discord-brands-solid.svg": "/secret-mall/static/media/discord-brands-solid.30aefc9dfd933ad91154848f1a101cac.svg",
+    "static/media/instagram-brands-solid.svg": "/secret-mall/static/media/instagram-brands-solid.9b97942d29fbfd31b4ef2e55bfae4b92.svg",
+    "index.html": "/secret-mall/index.html",
+    "static/media/x-twitter-brands-solid.svg": "/secret-mall/static/media/x-twitter-brands-solid.02605a63f47ba384d329354ca8c726bb.svg",
+    "main.079e0e6c.css.map": "/secret-mall/static/css/main.079e0e6c.css.map",
+    "main.9d302289.js.map": "/secret-mall/static/js/main.9d302289.js.map",
+    "511.e57ae850.chunk.js.map": "/secret-mall/static/js/511.e57ae850.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.079e0e6c.css",
+    "static/js/main.9d302289.js"
+  ]
+}
