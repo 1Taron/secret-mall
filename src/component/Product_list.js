@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Product_list() {
     const list = [
-        { id: 'Rusk', imgUrl: '/images/Rusk_character_img/img_01.jpg' },
+        { id: 'Rusk', imgUrl: 'https://1Taron.github.io/secret-mall/images/Rusk_character_img/img_01.jpg' },
         { id: 'Makina' },
         { id: 'XBot' },
         { id: 4 },

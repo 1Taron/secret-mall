@@ -49,7 +49,6 @@ export default function ProductDetail_3d_Rusk() {
         dirLight.castShadow = true; //그림자 생성
         scene.add(dirLight);
 
-
         // 조명 추가
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
         scene.add(ambientLight);
@@ -60,7 +59,7 @@ export default function ProductDetail_3d_Rusk() {
         const loader = new FBXLoader();
 
         loader.load(
-            '/Models/Rusk.fbx',
+            'https://1Taron.github.io/secret-mall/Models/Rusk.fbx',
             fbx => {
                 fbx.scale.set(0.25, 0.25, 0.25); // 모델 스케일 조정
                 fbx.position.set(0, -15, 0);
@@ -88,7 +87,6 @@ export default function ProductDetail_3d_Rusk() {
                 console.error(error);
             }
         );
-
 
         // 애니메이션 루프
         const animate = () => {

@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function Product_list() {
     const list = [
-        { id: 'AnimeticJazz', imgUrl: '/images/komado_clothes_img/img_01.jpg' },
+        { id: 'AnimeticJazz', imgUrl: 'https://1Taron.github.io/secret-mall/images/komado_clothes_img/img_01.jpg' },
         { id: 'Full Skirt Dress' },
         { id: 'A-line Skirt Dress' },
         { id: 4 },

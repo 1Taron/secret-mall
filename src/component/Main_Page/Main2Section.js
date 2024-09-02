@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react';
 import '../../css/Main_Page/Main_2Page.css';
 
 export default function Main2Section() {
-    const imgUrl_char = 'https://github.io/1Taron/secret-mall/images/MainPage_imgs/characterImg.jpg';
-    const imgUrl_cloth = 'https://github.io/1Taron/secret-mall/images/MainPage_imgs/clothesImg.jpg';
-    const imgUrl_unity = 'https://github.io/1Taron/secret-mall/images/MainPage_imgs/unityImg.jpg';
+    const imgUrl_char = 'https://1Taron.github.io/secret-mall/images/MainPage_imgs/characterImg.jpg';
+    const imgUrl_cloth = 'https://1Taron.github.io/secret-mall/images/MainPage_imgs/clothesImg.jpg';
+    const imgUrl_unity = 'https://1Taron.github.io/secret-mall/images/MainPage_imgs/unityImg.jpg';
 
     const scrollTimeoutRef = useRef(null);
 

@@ -4,13 +4,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const ProductThumnails = [
-    '/images/ProductThumnail/vrchat_img01.jpg',
-    '/images/ProductThumnail/vrchat_img02.jpg',
-    '/images/ProductThumnail/vrchat_img03.jpg',
-    '/images/ProductThumnail/vrchat_img04.jpg',
-    '/images/ProductThumnail/vrchat_img05.jpg',
-    '/images/ProductThumnail/vrchat_img06.jpg',
-    '/images/ProductThumnail/vrchat_img07.jpg',
+    'https://1Taron.github.io/secret-mall/images/ProductThumnail/vrchat_img01.jpg',
+    'https://1Taron.github.io/secret-mall/images/ProductThumnail/vrchat_img02.jpg',
+    'https://1Taron.github.io/secret-mall/images/ProductThumnail/vrchat_img03.jpg',
+    'https://1Taron.github.io/secret-mall/images/ProductThumnail/vrchat_img04.jpg',
+    'https://1Taron.github.io/secret-mall/images/ProductThumnail/vrchat_img05.jpg',
+    'https://1Taron.github.io/secret-mall/images/ProductThumnail/vrchat_img06.jpg',
+    'https://1Taron.github.io/secret-mall/images/ProductThumnail/vrchat_img07.jpg',
 ];
 
 export default function PDI_ThumbnailSlider_XBot() {

@@ -4,12 +4,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const ProductThumnails = [
-    '/images/Rusk_Character_img/img_01.jpg',
-    '/images/Rusk_Character_img/img_02.jpg',
-    '/images/Rusk_Character_img/img_03.jpg',
-    '/images/Rusk_Character_img/img_04.jpg',
-    '/images/Rusk_Character_img/img_05.jpg',
-    '/images/Rusk_Character_img/img_06.jpg',
+    'https://1Taron.github.io/secret-mall/images/Rusk_Character_img/img_01.jpg',
+    'https://1Taron.github.io/secret-mall/images/Rusk_Character_img/img_02.jpg',
+    'https://1Taron.github.io/secret-mall/images/Rusk_Character_img/img_03.jpg',
+    'https://1Taron.github.io/secret-mall/images/Rusk_Character_img/img_04.jpg',
+    'https://1Taron.github.io/secret-mall/images/Rusk_Character_img/img_05.jpg',
+    'https://1Taron.github.io/secret-mall/images/Rusk_Character_img/img_06.jpg',
 ];
 
 export default function PDI_ThumbnailSlider_Rusk() {

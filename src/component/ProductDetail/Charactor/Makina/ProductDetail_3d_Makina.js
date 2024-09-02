@@ -57,16 +57,26 @@ export default function ProductDetail_3d_Makina() {
 
         //텍스쳐 로더
         const textureLoader = new THREE.TextureLoader();
-        const Rusk_Alpha = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Alpha.png');
-        const Rusk_Body = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Body.png');
-        const Rusk_Costume = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Costume.png');
-        const Rusk_Hair = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Hair.png');
-        const Rusk_Face = textureLoader.load('Models/Rusk_v1.21/Textures/Rusk_Face.png');
+        const Rusk_Alpha = textureLoader.load(
+            'https://1Taron.github.io/secret-mall/Models/Rusk_v1.21/Textures/Rusk_Alpha.png'
+        );
+        const Rusk_Body = textureLoader.load(
+            'https://1Taron.github.io/secret-mall/Models/Rusk_v1.21/Textures/Rusk_Body.png'
+        );
+        const Rusk_Costume = textureLoader.load(
+            'https://1Taron.github.io/secret-mall/Models/Rusk_v1.21/Textures/Rusk_Costume.png'
+        );
+        const Rusk_Hair = textureLoader.load(
+            'https://1Taron.github.io/secret-mall/Models/Rusk_v1.21/Textures/Rusk_Hair.png'
+        );
+        const Rusk_Face = textureLoader.load(
+            'https://1Taron.github.io/secret-mall/Models/Rusk_v1.21/Textures/Rusk_Face.png'
+        );
 
         // FBX 모델 로드
         const loader = new FBXLoader();
         loader.load(
-            '/Models/Rusk_v1.21/FBX/Rusk_v1.2.1.fbx',
+            'https://1Taron.github.io/secret-mall/Models/Rusk_v1.21/FBX/Rusk_v1.2.1.fbx',
             fbx => {
                 fbx.scale.set(0.25, 0.25, 0.25); // 모델 스케일 조정
                 fbx.position.set(0, -15, 0);

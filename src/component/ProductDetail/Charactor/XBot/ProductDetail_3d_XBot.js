@@ -58,7 +58,7 @@ export default function ProductDetail_3d_XBot() {
         // FBX 모델 로드
         const loader = new FBXLoader();
         loader.load(
-            '/Models/XBot.fbx',
+            'https://1Taron.github.io/secret-mall/Models/XBot.fbx',
             fbx => {
                 fbx.scale.set(0.25, 0.25, 0.25); // 모델 스케일 조정
                 fbx.position.set(0, -15, 0);

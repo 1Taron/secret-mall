@@ -8,7 +8,7 @@ import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.124/examples
 export default function ProductDetail_3d_AnimeticJazz() {
     const viewBoxRef = useRef(null);
     const rendererRef = useRef(null);
-    const [modelPath, setModelPath] = useState('/Models/Adore-blueberry.fbx');
+    const [modelPath, setModelPath] = useState('https://1Taron.github.io/secret-mall/Models/Adore-blueberry.fbx');
 
     useEffect(() => {
         // 씬, 카메라, 렌더러 설정
@@ -58,13 +58,13 @@ export default function ProductDetail_3d_AnimeticJazz() {
 
         const loader = new FBXLoader();
 
-        const loadModel = (path) => {
+        const loadModel = path => {
             loader.load(
                 path,
-                (fbx) => {
+                fbx => {
                     fbx.scale.set(0.25, 0.25, 0.25);
                     fbx.position.set(0, -15, 0);
-                    fbx.traverse((child) => {
+                    fbx.traverse(child => {
                         if (child.isBone) {
                             if (child.name === 'LeftShoulder') {
                                 child.rotation.y = -1.6;
@@ -80,7 +80,7 @@ export default function ProductDetail_3d_AnimeticJazz() {
                     scene.add(fbx);
                 },
                 undefined,
-                (error) => {
+                error => {
                     console.error(error);
                 }
             );
@@ -101,7 +101,7 @@ export default function ProductDetail_3d_AnimeticJazz() {
         };
     }, [modelPath]); // 모델 경로가 변경될 때마다 이펙트 재실행
 
-    const handleModelChange = (event) => {
+    const handleModelChange = event => {
         setModelPath(event.target.value); // 드롭다운에서 선택된 모델 경로로 상태 업데이트
     };
 
@@ -110,10 +110,18 @@ export default function ProductDetail_3d_AnimeticJazz() {
             <div className="pd3_Container">
                 <div className="pd3_viewbox" ref={viewBoxRef}>
                     <select className="Select_Model" onChange={handleModelChange}>
-                        <option value="/Models/Adore-blueberry.fbx">Adore Blueberry</option>
-                        <option value="/Models/Adore-bluelime.fbx">Adore Bluelime</option>
-                        <option value="/Models/Adore-chemical.fbx">Adore Chemical</option>
-                        <option value="/Models/Adore-monopink.fbx">Adore Monopink</option>
+                        <option value="https://1Taron.github.io/secret-mall/Models/Adore-blueberry.fbx">
+                            Adore Blueberry
+                        </option>
+                        <option value="https://1Taron.github.io/secret-mall/Models/Adore-bluelime.fbx">
+                            Adore Bluelime
+                        </option>
+                        <option value="https://1Taron.github.io/secret-mall/Models/Adore-chemical.fbx">
+                            Adore Chemical
+                        </option>
+                        <option value="https://1Taron.github.io/secret-mall/Models/Adore-monopink.fbx">
+                            Adore Monopink
+                        </option>
                     </select>
                 </div>
             </div>

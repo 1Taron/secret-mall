@@ -4,11 +4,11 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const ProductThumnails = [
-    '/images/komado_clothes_img/img_01.jpg',
-    '/images/komado_clothes_img/img_02.jpg',
-    '/images/komado_clothes_img/img_03.jpg',
-    '/images/komado_clothes_img/img_04.jpg',
-    '/images/komado_clothes_img/img_05.jpg',
+    'https://1Taron.github.io/secret-mall/images/komado_clothes_img/img_01.jpg',
+    'https://1Taron.github.io/secret-mall/images/komado_clothes_img/img_02.jpg',
+    'https://1Taron.github.io/secret-mall/images/komado_clothes_img/img_03.jpg',
+    'https://1Taron.github.io/secret-mall/images/komado_clothes_img/img_04.jpg',
+    'https://1Taron.github.io/secret-mall/images/komado_clothes_img/img_05.jpg',
 ];
 
 export default function PDI_ThumbnailSlider_AnimeticJazz() {
