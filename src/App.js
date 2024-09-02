@@ -10,12 +10,12 @@ function App() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<MainPage />} />
-                <Route path="/Charactor" element={<Product />} />
-                <Route path="/Charactor/:productId" element={<ProductDetailWrapper />} />
-                <Route path="/Clothes" element={<Product />} />
-                <Route path="/Clothes/:productId" element={<ProductDetailWrapper />} />
-                <Route path="/Login" element={<LoginPage />} />
+                <Route path="secret-mall/" element={<MainPage />} />
+                <Route path="secret-mall/Charactor" element={<Product />} />
+                <Route path="secret-mall/Charactor/:productId" element={<ProductDetailWrapper />} />
+                <Route path="secret-mall/Clothes" element={<Product />} />
+                <Route path="secret-mall/Clothes/:productId" element={<ProductDetailWrapper />} />
+                <Route path="secret-mall/Login" element={<LoginPage />} />
             </Routes>
         </>
     );
