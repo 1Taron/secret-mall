@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/secret-mall/static/css/main.079e0e6c.css",
-    "main.js": "/secret-mall/static/js/main.e16d82bd.js",
+    "main.js": "/secret-mall/static/js/main.9ff41620.js",
     "static/js/511.e57ae850.chunk.js": "/secret-mall/static/js/511.e57ae850.chunk.js",
     "static/media/login_backgroud.jpg": "/secret-mall/static/media/login_backgroud.fb9ec2a742d3e3723e7e.jpg",
     "static/media/slick.svg": "/secret-mall/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -14,11 +14,11 @@
     "index.html": "/secret-mall/index.html",
     "static/media/x-twitter-brands-solid.svg": "/secret-mall/static/media/x-twitter-brands-solid.02605a63f47ba384d329354ca8c726bb.svg",
     "main.079e0e6c.css.map": "/secret-mall/static/css/main.079e0e6c.css.map",
-    "main.e16d82bd.js.map": "/secret-mall/static/js/main.e16d82bd.js.map",
+    "main.9ff41620.js.map": "/secret-mall/static/js/main.9ff41620.js.map",
     "511.e57ae850.chunk.js.map": "/secret-mall/static/js/511.e57ae850.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.079e0e6c.css",
-    "static/js/main.e16d82bd.js"
+    "static/js/main.9ff41620.js"
   ]
 }
