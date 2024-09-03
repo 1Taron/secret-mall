@@ -12,7 +12,7 @@ export default function Main_1Page() {
             setShowCategories(true);
         }, 2500); // 로고 애니메이션이 1초라고 가정
 
-        return () => clearTimeout(timer);
+        return () => { clearTimeout(timer); };
     }, []);
 
     return (

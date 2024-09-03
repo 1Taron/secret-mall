@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 const Main_3d = () => {
-    const mountRef = useRef(null);
 
+    const mountRef = useRef(null);
     useEffect(() => {
         // 기본적인 설정
         const scene = new THREE.Scene();
@@ -13,8 +13,7 @@ const Main_3d = () => {
 
         renderer.setClearColor(0x000000, 1); // 0x000000은 검은색
 
-        // mountRef에 캔버스를 추가
-        mountRef.current.appendChild(renderer.domElement);
+        mountRef.current?.appendChild(renderer.domElement);
 
         // 별 생성
         const starGeometry = new THREE.BufferGeometry();
@@ -34,26 +33,37 @@ const Main_3d = () => {
         camera.position.z = 1;
 
         // 애니메이션 함수
+        let animationFrameId;
         const animate = () => {
-            requestAnimationFrame(animate);
-            stars.rotation.y += 0.001; // 별들이 천천히 회전
+            animationFrameId = requestAnimationFrame(animate);
+            stars.rotation.y += 0.001;
             renderer.render(scene, camera);
         };
-
         animate();
 
         // 리사이즈 이벤트 처리
-        window.addEventListener('resize', () => {
+        const handleResize = () => {
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.updateProjectionMatrix();
             renderer.setSize(window.innerWidth, window.innerHeight);
-        });
+        };
+        window.addEventListener('resize', handleResize);
 
         // 컴포넌트 언마운트 시 정리
         return () => {
-            mountRef.current.removeChild(renderer.domElement);
+            cancelAnimationFrame(animationFrameId);
+            window.removeEventListener('resize', handleResize);
+
+            // 씬의 객체들 정리
+            scene.remove(stars);
+            starGeometry.dispose();
+            starMaterial.dispose();
+
+            if (mountRef.current && renderer.domElement) {
+                mountRef.current.removeChild(renderer.domElement);
+            }
+
             renderer.dispose();
-            window.removeEventListener('resize', () => {});
         };
     }, []);
 
