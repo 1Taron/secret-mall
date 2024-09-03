@@ -1,22 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/Header_Category.css';
 
 export default function Header_Category() {
     return (
         <>
             <div className="Header_Category">
-                <a href="/Charactor" className="Header_Category_Link">
+                <Link to="/Charactor" className="Header_Category_Link">
                     Character
-                </a>
-                <a href="/Clothes" className="Header_Category_Link">
+                </Link>
+                <Link to="/Clothes" className="Header_Category_Link">
                     Clothes
-                </a>
-                <a href="/" className="Header_Category_Link">
+                </Link>
+                <Link to="/" className="Header_Category_Link">
                     Accessories
-                </a>
-                <a href="/" className="Header_Category_Link">
+                </Link>
+                <Link to="/" className="Header_Category_Link">
                     more...
-                </a>
+                </Link>
             </div>
         </>
     );

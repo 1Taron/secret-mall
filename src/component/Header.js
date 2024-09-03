@@ -2,7 +2,7 @@ import React from 'react';
 import '../css/Header.css';
 import Logo from './Logo';
 import Header_Category from './Header_Category';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
     const location = useLocation();
@@ -13,9 +13,9 @@ export default function Header() {
         <div className={`Header_container ${isWhiteHeader ? 'white-header' : 'black-header'}`}>
             <Logo className="Header_Logo" />
             <Header_Category />
-            <a href="/Login" className="Header_Login">
+            <Link to="/Login" className="Header_Login">
                 Log in
-            </a>
+            </Link>
         </div>
     );
 }
