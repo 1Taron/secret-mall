@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../css/loginbox.css';
 
 export default function LoginBox() {
@@ -28,13 +29,13 @@ export default function LoginBox() {
         setIsSignIn(prev => !prev); // 상태 토글
     }
 
-    const logoUrl = '/images/logo.png';
+    const logoUrl = 'https://1Taron.github.io/secret-mall/images/logo.png';
 
     return (
         <>
-            <a href="/">
+            <Link to="/">
                 <img className="thumbnail" src={logoUrl} alt="dimhub" />
-            </a>
+            </Link>
 
             <div className="container">
                 <div className={`sign_section_form ${isSignIn ? 'active' : 'inactive'}`}>
